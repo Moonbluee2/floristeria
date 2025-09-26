@@ -1,15 +1,18 @@
 <h2>🌸 Colección de Flores</h2>
 
+<!-- Lista de flores -->
 <div class="lista">
   <app-tarjeta *ngFor="let f of flores" [flor]="f"></app-tarjeta>
 </div>
 
-<button (click)="agregarFlor()">➕ Agregar Flor</button>
+<!-- Botón toggle -->
+<button (click)="toggleFormulario()">
+  {{ mostrarFormulario ? "❌ Ocultar Formulario" : "➕ Agregar Flor" }}
+</button>
 
-<!-- Formulario invisible -->
+<!-- Formulario visible/invisible -->
 <div *ngIf="mostrarFormulario" class="formulario">
   <h3>➕ Agregar nueva flor</h3>
-
   <form>
     <label>Nombre:</label>
     <input type="text" [(ngModel)]="nuevaFlor.nombre" name="nombre">
@@ -17,8 +20,14 @@
     <label>Descripción:</label>
     <textarea [(ngModel)]="nuevaFlor.descripcion" name="descripcion"></textarea>
 
-    <label>Imagen (ruta en assets):</label>
-    <input type="text" [(ngModel)]="nuevaFlor.imagen" name="imagen">
+    <label>Imagen (selecciona archivo):</label>
+    <input type="file" (change)="onFileSelected($event)" accept="image/*">
+
+    <!-- Vista previa -->
+    <div *ngIf="nuevaFlor.imagen" class="preview">
+      <p>Vista previa:</p>
+      <img [src]="nuevaFlor.imagen" alt="Vista previa" width="120">
+    </div>
 
     <label>Temporada:</label>
     <input type="text" [(ngModel)]="nuevaFlor.temporada" name="temporada">
@@ -28,7 +37,7 @@
 
     <div class="botones">
       <button type="button" (click)="guardarFlor()">Guardar</button>
-      <button type="button" (click)="cancelar()">Cancelar</button>
+      <button type="button" (click)="toggleFormulario()">Cancelar</button>
     </div>
   </form>
 </div>

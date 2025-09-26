@@ -1,60 +1,60 @@
 h2 {
   text-align: center;
-  margin: 20px 0;
-  font-size: 28px;
-  color: #2e4d34; /* Verde elegante */
   font-family: 'Georgia', serif;
-}
-
-.lista {
-  display: flex;
-  flex-direction: column; /* Lista vertical */
-  align-items: center;
-  width: 100%;
-  gap: 20px;
+  color: #4a2b63;
   margin-bottom: 20px;
 }
 
+/* Botón principal */
 button {
-  margin: 15px 5px;
-  padding: 10px 20px;
-  background-color: #2e4d34;
-  color: #fffdf7;
-  font-size: 15px;
-  border: 2px solid #c9a74d;
-  border-radius: 6px;
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  font-family: 'Georgia', serif;
+
+  background: linear-gradient(135deg, #d6b3ff, #f3e5f5);
+  color: #4a2b63;
+  box-shadow: 0px 4px 10px rgba(74, 43, 99, 0.2);
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  background-color: #c9a74d;
-  color: #2e4d34;
+  background: linear-gradient(135deg, #c4a0ff, #e1bee7);
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 14px rgba(74, 43, 99, 0.3);
 }
 
-/* Formulario elegante */
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0px 2px 6px rgba(74, 43, 99, 0.2);
+}
+
+/* Formulario */
 .formulario {
-  margin: 30px auto;
+  max-width: 500px;
+  margin: 0 auto;
   padding: 20px;
-  width: 90%;
-  max-width: 600px;
-  border: 2px solid #c9a74d;
   border-radius: 12px;
-  background-color: #fffdf7;
-  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.15);
-  font-family: 'Georgia', serif;
+  background: #fdf9ff;
+  border: 1px solid #d6b3ff;
+  box-shadow: 0 4px 12px rgba(74, 43, 99, 0.15);
 }
 
 .formulario h3 {
+  color: #4a2b63;
+  text-align: center;
   margin-bottom: 15px;
-  color: #2e4d34;
 }
 
 .formulario label {
   display: block;
   margin-top: 10px;
   font-weight: bold;
-  color: #2e4d34;
+  color: #4a2b63;
 }
 
 .formulario input,
@@ -62,17 +62,31 @@ button:hover {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
-  border: 1px solid #c9a74d;
+  border: 1px solid #c4a0ff;
   border-radius: 6px;
-  font-family: 'Georgia', serif;
+  outline: none;
 }
 
-.formulario textarea {
-  resize: none;
-  height: 70px;
+.formulario input:focus,
+.formulario textarea:focus {
+  border-color: #8e44ad;
+  box-shadow: 0 0 5px rgba(142, 68, 173, 0.3);
 }
 
-.botones {
+.formulario .botones {
+  display: flex;
+  justify-content: space-between;
   margin-top: 15px;
-  text-align: right;
+}
+
+/* Vista previa */
+.preview {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.preview img {
+  border-radius: 8px;
+  border: 1px solid #c4a0ff;
+  box-shadow: 0px 4px 10px rgba(74, 43, 99, 0.2);
 }

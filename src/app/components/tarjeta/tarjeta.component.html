@@ -1,10 +1,26 @@
-<div class="card">
-  <img [src]="flor.imagen" [alt]="flor.nombre">
-  <div class="card-content">
+<div class="tarjeta-container">
+  <!-- Card de imagen -->
+  <div class="card imagen-card" (click)="toggleDetalles()">
+    <img [src]="flor.imagen" [alt]="flor.nombre">
+  </div>
+
+  <!-- Card de información -->
+  <div class="card info-card">
     <h3>{{ flor.nombre }}</h3>
-    <p class="descripcion">{{ flor.descripcion }}</p>
-    <p class="temporada">🌱 Temporada: <strong>{{ flor.temporada }}</strong></p>
-    <p class="precio">💰 Precio: <strong>${{ flor.precio }}</strong></p>
-    <button class="detalles">✏️ Cambiar detalles</button>
+    <p><strong>Descripción:</strong> {{ flor.descripcion }}</p>
+    <p><strong>Temporada:</strong> {{ flor.temporada }}</p>
+    <p><strong>Precio:</strong> ${{ flor.precio }}</p>
+  </div>
+</div>
+
+<!-- Overlay lateral -->
+<div class="overlay" *ngIf="mostrarDetalles">
+  <div class="detalle-card">
+    <button class="cerrar" (click)="toggleDetalles()">✖</button>
+    <h3>{{ flor.nombre }}</h3>
+    <img [src]="flor.imagen" [alt]="flor.nombre">
+    <p><strong>Descripción:</strong> {{ flor.descripcion }}</p>
+    <p><strong>Temporada:</strong> {{ flor.temporada }}</p>
+    <p><strong>Precio:</strong> ${{ flor.precio }}</p>
   </div>
 </div>

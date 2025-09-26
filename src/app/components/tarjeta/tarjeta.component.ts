@@ -11,4 +11,9 @@ import { Flor } from '../../interfaces/flor.interface';
 })
 export class TarjetaComponent {
   @Input() flor!: Flor;
+  mostrarDetalles = false;
+
+  toggleDetalles() {
+    this.mostrarDetalles = !this.mostrarDetalles;
+  }
 }
