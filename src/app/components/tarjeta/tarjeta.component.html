@@ -1,0 +1,10 @@
+<div class="card">
+  <img [src]="flor.imagen" [alt]="flor.nombre">
+  <div class="card-content">
+    <h3>{{ flor.nombre }}</h3>
+    <p class="descripcion">{{ flor.descripcion }}</p>
+    <p class="temporada">🌱 Temporada: <strong>{{ flor.temporada }}</strong></p>
+    <p class="precio">💰 Precio: <strong>${{ flor.precio }}</strong></p>
+    <button class="detalles">✏️ Cambiar detalles</button>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+h2 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 28px;
+  color: #2e4d34; /* Verde elegante */
+  font-family: 'Georgia', serif;
+}
+
+.lista {
+  display: flex;
+  flex-direction: column; /* Lista vertical */
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 15px 5px;
+  padding: 10px 20px;
+  background-color: #2e4d34;
+  color: #fffdf7;
+  font-size: 15px;
+  border: 2px solid #c9a74d;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+}
+
+button:hover {
+  background-color: #c9a74d;
+  color: #2e4d34;
+}
+
+/* Formulario elegante */
+.formulario {
+  margin: 30px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  border: 2px solid #c9a74d;
+  border-radius: 12px;
+  background-color: #fffdf7;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.15);
+  font-family: 'Georgia', serif;
+}
+
+.formulario h3 {
+  margin-bottom: 15px;
+  color: #2e4d34;
+}
+
+.formulario label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #2e4d34;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #c9a74d;
+  border-radius: 6px;
+  font-family: 'Georgia', serif;
+}
+
+.formulario textarea {
+  resize: none;
+  height: 70px;
+}
+
+.botones {
+  margin-top: 15px;
+  text-align: right;
+}

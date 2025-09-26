@@ -1,0 +1,62 @@
+.card {
+  display: flex;
+  flex-direction: row; /* Imagen a la izquierda, texto a la derecha */
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  border: 1px solid #c9a74d; /* Dorado */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.15);
+  background-color: #fffdf7; /* Blanco cálido */
+}
+
+.card img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-right: 2px solid #c9a74d;
+}
+
+.card-content {
+  flex: 1;
+  padding: 15px 20px;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #2e4d34; /* Verde elegante */
+  font-family: 'Georgia', serif;
+}
+
+.descripcion {
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.temporada {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.precio {
+  font-size: 16px;
+  color: #b8860b; /* Dorado oscuro */
+  margin-bottom: 12px;
+}
+
+.detalles {
+  padding: 8px 15px;
+  background-color: #2e4d34;
+  color: #fffdf7;
+  border: 1px solid #c9a74d;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.detalles:hover {
+  background-color: #c9a74d;
+  color: #2e4d34;
+}

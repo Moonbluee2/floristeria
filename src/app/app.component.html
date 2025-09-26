@@ -1,0 +1,18 @@
+<div class="container mt-4">
+  <h1 class="text-center text-success mb-4">🌸 Floristería</h1>
+
+  <!-- Vista Lista -->
+  <app-lista
+    *ngIf="vista === 'lista'"
+    [flores]="flores"
+    (onAgregar)="mostrarFormulario()">
+  </app-lista>
+
+  <!-- Vista Formulario -->
+  <app-formulario
+    *ngIf="vista === 'formulario'"
+    [flor]="florNueva"
+    (onGuardar)="guardarFlor($event)"
+    (onCancelar)="cancelar()">
+  </app-formulario>
+</div>
