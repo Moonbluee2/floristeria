@@ -1,14 +1,37 @@
 h2 {
   text-align: center;
-  font-family: 'Georgia', serif;
-  color: #4a2b63;
-  margin-bottom: 20px;
+  font-family: 'Georgia', serif; /* tipografía elegante */
+  font-size: 2.2rem; /* tamaño grande */
+  color: #4a2b63; /* lila oscuro */
+  margin: 40px 0 30px 0; /* espacio arriba y abajo */
+  letter-spacing: 2px; /* separación entre letras */
+  position: relative;
 }
 
-/* Botón principal */
+/* Línea decorativa debajo del título */
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin: 12px auto 0 auto;
+  background: linear-gradient(90deg, #c4a0ff, #8e44ad);
+  border-radius: 2px;
+}
+
+/* ===== LISTA DE FLORES ===== */
+.lista {
+  max-width: 900px;
+  margin: 0 auto 40px auto; /* margen inferior para separar del formulario */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== BOTÓN ===== */
 button {
   display: block;
-  margin: 20px auto;
+  margin: 0 auto 30px auto; /* centrado con espacio debajo */
   padding: 12px 24px;
   font-size: 16px;
   font-weight: bold;
@@ -33,11 +56,11 @@ button:active {
   box-shadow: 0px 2px 6px rgba(74, 43, 99, 0.2);
 }
 
-/* Formulario */
+/* ===== FORMULARIO ===== */
 .formulario {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto; /* centra y separa bien */
+  padding: 25px;
   border-radius: 12px;
   background: #fdf9ff;
   border: 1px solid #d6b3ff;
@@ -47,12 +70,12 @@ button:active {
 .formulario h3 {
   color: #4a2b63;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .formulario label {
   display: block;
-  margin-top: 10px;
+  margin-top: 12px;
   font-weight: bold;
   color: #4a2b63;
 }
@@ -60,8 +83,8 @@ button:active {
 .formulario input,
 .formulario textarea {
   width: 100%;
-  padding: 8px;
-  margin-top: 5px;
+  padding: 10px;
+  margin-top: 6px;
   border: 1px solid #c4a0ff;
   border-radius: 6px;
   outline: none;
@@ -73,20 +96,9 @@ button:active {
   box-shadow: 0 0 5px rgba(142, 68, 173, 0.3);
 }
 
+/* botones del formulario */
 .formulario .botones {
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
-}
-
-/* Vista previa */
-.preview {
-  margin-top: 10px;
-  text-align: center;
-}
-
-.preview img {
-  border-radius: 8px;
-  border: 1px solid #c4a0ff;
-  box-shadow: 0px 4px 10px rgba(74, 43, 99, 0.2);
+  margin-top: 20px;
 }
